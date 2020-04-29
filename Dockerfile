@@ -6,7 +6,7 @@ LABEL \
   maintainer="Logan Marchione <logan@loganmarchione.com>" \
   org.opencontainers.image.authors="Logan Marchione <logan@loganmarchione.com>" \
   org.opencontainers.image.title="docker-geoipupdate" \
-  org.opencontainers.image.description="Runs MaxMind's geoipupdate program in Docker" \
+  org.opencontainers.image.description="Runs MaxMind's GeoIP Update program in Docker" \
   org.opencontainers.image.created=$BUILD_DATE
 
 ENV VERSION 4.2.2
