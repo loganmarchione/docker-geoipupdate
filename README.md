@@ -55,7 +55,7 @@ networks:
   geoipupdate:
 
 volumes:
-  geoipupdate_data:
+  GeoIP_Data:
     driver: local
 ```
 
