@@ -7,6 +7,7 @@ https://hub.docker.com/r/maxmindinc/geoipupdate
 # docker-geoipupdate
 
 [![Build Status](https://travis-ci.org/loganmarchione/docker-geoipupdate.svg?branch=master)](https://travis-ci.org/loganmarchione/docker-geoipupdate)
+[![](https://images.microbadger.com/badges/image/loganmarchione/docker-geoipupdate.svg)](https://microbadger.com/images/loganmarchione/docker-geoipupdate "Get your own image badge on microbadger.com")
 
 Runs MaxMind's [GeoIP Update](https://dev.maxmind.com/geoip/geoipupdate/) program in Docker
   - Source code: [GitHub](https://github.com/loganmarchione/docker-geoipupdate)
