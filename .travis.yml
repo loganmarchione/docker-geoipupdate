@@ -14,7 +14,7 @@ script:
   - docker build --file Dockerfile --tag ${USER}/${REPO}:${VERSION} .
 
   # Test if the container runs, then if geoipupdate is installed successfully
-  - docker run --name test-container --detach --env GeoIP_AccountID=XXXXXX --env GeoIP_LicenseKey=XXXXXXXXXXXXXXXX --env 'GeoIP_EditionIDs=GeoLite2-ASN GeoLite2-City GeoLite2-Country' --env 'GeoIP_Cron=5 4 15 * * /usr/bin/geoipupdate -v' --volume 'GeoIP_Data:/usr/share/GeoIP' ${USER}/${REPO}:${VERSION}
+  - docker run --name test-container --detach --env GeoIP_AccountID=${GeoIP_AccountID} --env GeoIP_LicenseKey=${GeoIP_LicenseKey} --env 'GeoIP_EditionIDs=GeoLite2-ASN GeoLite2-City GeoLite2-Country' --env 'GeoIP_Cron=5 4 15 * * /usr/bin/geoipupdate -v' --volume 'GeoIP_Data:/usr/share/GeoIP' ${USER}/${REPO}:${VERSION}
   - sleep 10
   - docker ps -a
   - docker exec --tty test-container /bin/sh -c "which geoipupdate && geoipupdate --version"
