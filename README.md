@@ -1,10 +1,16 @@
+# ⚠️ WARNING ⚠️
+
+This was created before MaxMind released their official Docker container. As such, I will not be updating this code and I suggest you use their official container (link below)
+
+https://hub.docker.com/r/maxmindinc/geoipupdate
+
 # docker-geoipupdate
 
 [![Build Status](https://travis-ci.org/loganmarchione/docker-geoipupdate.svg?branch=master)](https://travis-ci.org/loganmarchione/docker-geoipupdate)
 
 Runs MaxMind's [GeoIP Update](https://dev.maxmind.com/geoip/geoipupdate/) program in Docker
   - Source code: [GitHub](https://github.com/loganmarchione/docker-geoipupdate)
-  - Docker container: [Docker Hub]()
+  - Docker container: [Docker Hub](https://hub.docker.com/r/loganmarchione/docker-geoipupdate)
   - Image base: [Ubuntu](https://hub.docker.com/_/ubuntu)
   - Init system: N/A
   - Application: [GeoIP Update](https://dev.maxmind.com/geoip/geoipupdate/)
