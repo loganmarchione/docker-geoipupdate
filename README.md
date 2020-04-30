@@ -7,7 +7,8 @@ https://hub.docker.com/r/maxmindinc/geoipupdate
 # docker-geoipupdate
 
 [![Build Status](https://travis-ci.org/loganmarchione/docker-geoipupdate.svg?branch=master)](https://travis-ci.org/loganmarchione/docker-geoipupdate)
-[![](https://images.microbadger.com/badges/image/loganmarchione/docker-geoipupdate.svg)](https://microbadger.com/images/loganmarchione/docker-geoipupdate "Get your own image badge on microbadger.com")
+[![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/loganmarchione/docker-geoipupdate)](https://hub.docker.com/r/loganmarchione/docker-geoipupdate)
+[![MicroBadger Layers](https://img.shields.io/microbadger/layers/loganmarchione/docker-geoipupdate)](https://microbadger.com/images/loganmarchione/docker-geoipupdate)
 
 Runs MaxMind's [GeoIP Update](https://dev.maxmind.com/geoip/geoipupdate/) program in Docker
   - Source code: [GitHub](https://github.com/loganmarchione/docker-geoipupdate)
