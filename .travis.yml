@@ -21,7 +21,7 @@ script:
 
 after_success:
   # Login to DockerHub
-  - echo "$DOCKER_HUB_PASS" | docker login -u "$DOCKER_HUB_USER" --password-stdin
+  - docker login -u "$DOCKER_HUB_USER" -p "$DOCKER_HUB_PASS"
 
   # Image with numbered tag
   - docker tag ${USER}/${REPO}:${VERSION} ${USER}/${REPO}:${VERSION}
@@ -30,3 +30,6 @@ after_success:
   # Image with latest tag
   - docker tag ${USER}/${REPO}:${VERSION} ${USER}/${REPO}:latest
   - docker push ${USER}/${REPO}:latest
+
+  # Logout of DockerHub
+  - docker logout
