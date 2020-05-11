@@ -17,6 +17,14 @@ Runs MaxMind's [GeoIP Update](https://dev.maxmind.com/geoip/geoipupdate/) progra
   - Init system: N/A
   - Application: [GeoIP Update](https://dev.maxmind.com/geoip/geoipupdate/)
 
+## Explanation
+
+  - This run MaxMind's GeoIP Update program in Docker. The databases are saved to a volume, which can then be exposed to another container (e.g., Graylog).
+
+## Requirements
+
+  - You must already have a Maxmind account, as described [here](https://blog.maxmind.com/2019/12/18/significant-changes-to-accessing-and-using-geolite2-databases/).
+
 ## Docker image information
 
 ### Docker image tags
