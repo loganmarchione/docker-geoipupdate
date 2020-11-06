@@ -6,13 +6,8 @@ https://hub.docker.com/r/maxmindinc/geoipupdate
 
 # docker-geoipupdate
 
-[![Build Status](https://travis-ci.org/loganmarchione/docker-geoipupdate.svg?branch=master)](https://travis-ci.org/loganmarchione/docker-geoipupdate)
-[![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/loganmarchione/docker-geoipupdate)](https://hub.docker.com/r/loganmarchione/docker-geoipupdate)
-[![MicroBadger Layers](https://img.shields.io/microbadger/layers/loganmarchione/docker-geoipupdate)](https://microbadger.com/images/loganmarchione/docker-geoipupdate)
-
 Runs MaxMind's [GeoIP Update](https://dev.maxmind.com/geoip/geoipupdate/) program in Docker
   - Source code: [GitHub](https://github.com/loganmarchione/docker-geoipupdate)
-  - Docker container: [Docker Hub](https://hub.docker.com/r/loganmarchione/docker-geoipupdate)
   - Image base: [Ubuntu](https://hub.docker.com/_/ubuntu)
   - Init system: N/A
   - Application: [GeoIP Update](https://dev.maxmind.com/geoip/geoipupdate/)
@@ -49,30 +44,23 @@ N/A
 | Choose at your discretion | /usr/share/GeoIP    | Used to store the MaxMind databases |
 
 ### Example usage
-Below is an example docker-compose.yml file.
+
+#### Build
 ```
-version: '3'
-services:
-  geoipupdate:
-    container_name: geoipupdate
-    restart: unless-stopped
-    environment:
-      - GeoIP_AccountID=XXXXXX
-      - GeoIP_LicenseKey=XXXXXXXXXXXXXXXX
-      - 'GeoIP_EditionIDs=GeoLite2-ASN GeoLite2-City GeoLite2-Country'
-      - 'GeoIP_Cron=5 4 15 * * /usr/bin/geoipupdate -v'
-    networks:
-      - geoipupdate
-    volumes:
-      - 'GeoIP_Data:/usr/share/GeoIP'
-    image: loganmarchione/docker-geoipupdate:latest
+git clone https://github.com/loganmarchione/docker-geoipupdate.git
+cd docker-geoipupdate
+docker build --no-cache --file Dockerfile --tag loganmarchione/docker-geoipupdate:1.0.3 .
+```
 
-networks:
-  geoipupdate:
-
-volumes:
-  GeoIP_Data:
-    driver: local
+#### Run
+```
+docker run --name geoipupdate --detach \
+  --env GeoIP_AccountID=ACCOUNT_ID \
+  --env GeoIP_LicenseKey=LICENSE_KEY \
+  --env 'GeoIP_EditionIDs=GeoLite2-ASN GeoLite2-City GeoLite2-Country' \
+  --env 'GeoIP_Cron=5 4 15 * * /usr/bin/geoipupdate -v' \
+  --volume 'GeoIP_Data:/usr/share/GeoIP' \
+  loganmarchione/docker-geoipupdate:1.0.3
 ```
 
 ## TODO
