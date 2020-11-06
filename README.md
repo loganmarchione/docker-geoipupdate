@@ -20,12 +20,6 @@ Runs MaxMind's [GeoIP Update](https://dev.maxmind.com/geoip/geoipupdate/) progra
 
   - You must already have a Maxmind account, as described [here](https://blog.maxmind.com/2019/12/18/significant-changes-to-accessing-and-using-geolite2-databases/).
 
-## Docker image information
-
-### Docker image tags
-  - `latest`: Latest version
-  - `X.X.X`: [Semantic version](https://semver.org/) (use if you want to stick on a specific version)
-
 ### Environment variables
 | Variable          | Required? | Definition                       | Example                                     | Comments                        |
 |-------------------|-----------|----------------------------------|---------------------------------------------|---------------------------------|
