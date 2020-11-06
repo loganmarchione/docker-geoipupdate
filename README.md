@@ -49,7 +49,7 @@ N/A
 ```
 git clone https://github.com/loganmarchione/docker-geoipupdate.git
 cd docker-geoipupdate
-docker build --no-cache --file Dockerfile --tag loganmarchione/docker-geoipupdate:1.0.3 .
+docker build --no-cache --file Dockerfile --tag loganmarchione/docker-geoipupdate .
 ```
 
 #### Run
@@ -60,7 +60,7 @@ docker run --name geoipupdate --detach \
   --env 'GeoIP_EditionIDs=GeoLite2-ASN GeoLite2-City GeoLite2-Country' \
   --env 'GeoIP_Cron=5 4 15 * * /usr/bin/geoipupdate -v' \
   --volume 'GeoIP_Data:/usr/share/GeoIP' \
-  loganmarchione/docker-geoipupdate:1.0.3
+  loganmarchione/docker-geoipupdate
 ```
 
 ## TODO
